@@ -1,12 +1,11 @@
 import './App.css';
 
-import Navbar from "./Lab1/navbar"
+import Navbar from "./Lab1-layout/navbar.js";
+
 
 function App() {
   return (
-    <div className="App">
-
-      Hello React Lab1
+    <div className="App container">
       <Navbar />
     </div>
   );
