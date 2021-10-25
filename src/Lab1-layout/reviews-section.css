@@ -1,6 +1,6 @@
 #reviews-container{
     padding-top: 2.5rem;
-    padding-left: 4.5rem;
+    padding-left: 2.5rem;
 }
 .bg-quotes{
     background-image: url("./assets/images/bg-quotes.png");
@@ -9,5 +9,17 @@
 }
 
 .card{
-    height: 200px;
+    height: 210px;
+}
+
+@media screen and (max-width: 1350px) and (min-width: 975px){
+    .card-col{
+        width: 50%!important;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 750px){
+    .card{
+        height: 230px!important;
+    }
 }
