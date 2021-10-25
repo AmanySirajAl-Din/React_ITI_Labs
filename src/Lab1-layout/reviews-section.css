@@ -1,6 +1,7 @@
 #reviews-container{
     padding-top: 2.5rem;
     padding-left: 2.5rem;
+    padding-bottom: 15rem;
 }
 .bg-quotes{
     background-image: url("./assets/images/bg-quotes.png");
