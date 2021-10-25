@@ -17,3 +17,10 @@ img, svg{
   width: 100%;
 }
 
+.bg-darker{
+  background-color: hsl(218, 28%, 13%);
+}
+
+.smaller-txt{
+  font-size: 0.7rem;
+}
