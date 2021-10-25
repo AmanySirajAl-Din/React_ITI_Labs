@@ -4,8 +4,8 @@
   padding: 0;
 }
 
-.App{
-  background-color: hsl(217, 28%, 15%);
+.bg-main{
+  background-color: hsl(217, 28%, 15%)!important;
   color: white;
 }
 

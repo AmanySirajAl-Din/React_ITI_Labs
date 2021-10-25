@@ -8,7 +8,7 @@ import Reviews_Section from "./Lab1-layout/reviews-section.js";
 
 function App() {
   return (
-    <div className="App container-fluid p-0">
+    <div className="App container-fluid p-0 bg-main">
       <Navbar />
       <Header />
       <Services_Section />
