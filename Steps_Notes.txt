@@ -6,3 +6,9 @@
 
 -Start React App
     >>npm start
+
+Git, GitHub
+===========
+    >>git branch -M main
+    >>git remote add origin https://github.com/AmanySirajAl-Din/React_ITI_Labs.git
+    >>git push -u origin main
