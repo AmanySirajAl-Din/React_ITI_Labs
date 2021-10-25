@@ -14,12 +14,12 @@ function Header() {
                         All your files in one secure location,
                         accessible anywhere.
                     </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ratione rem corrupti.
+                    <p className="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ratione rem corrupti.
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure sunt placeat
                         ullam aut magni at provident cumque error dolorum mollitia quis,
                         sit inventore explicabo delectus perferendis odio ratione, maiores nihil?
                     </p>
-                    <button className="btn btn-info text-light py-1 px-5">Get Started</button>
+                    <button className="btn btn-info rounded-pill text-light py-1 px-5">Get Started</button>
                 </div>
             </div>
             <div className="col-lg-3 col-md-2 col-1"></div>
