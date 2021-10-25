@@ -5,7 +5,7 @@ import Header from "./Lab1-layout/header.js";
 
 function App() {
   return (
-    <div className="App container">
+    <div className="App container-fluid p-0">
       <Navbar />
       <Header />
     </div>

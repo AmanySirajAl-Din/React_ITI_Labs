@@ -1,0 +1,15 @@
+.bg-img1{
+    background-image: url("./assets/images/bg-curvy-desktop.svg");
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+button{
+    border-radius: 20px;
+
+}
+
+p{
+    font-size: small;
+}
