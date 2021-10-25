@@ -4,7 +4,7 @@ import profile_2 from "./assets/images/profile-2.jpg";
 import profile_3 from "./assets/images/profile-3.jpg";
 
 
-function Header() {
+function Reviews_Section() {
     return (
         <section id="reviews-container" className="container-fluid row bg-quotes bg-darker">
             <div className="card-col col-lg-4 col-md-6 col-12">
@@ -48,4 +48,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Reviews_Section;
