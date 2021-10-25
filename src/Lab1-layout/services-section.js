@@ -20,8 +20,7 @@ function Services_Section() {
                         </div>
                         <p className="fs-6 fw-bold">Acess your files, anywhere</p>
                         <p className="smaller-txt">
-                            Lorem ipsum dolor.
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure sunt placeat
+                            The ability to use a smartphone, tablet, or computer to acces your account means your files follow you everywhere.
                         </p>
                     </div>
                     <div className="col-6">
@@ -30,8 +29,7 @@ function Services_Section() {
                         </div>
                         <p className="fs-6 fw-bold">Security you can trust</p>
                         <p className="smaller-txt">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ratione rem corrupti.
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure sunt placeat
+                            2-factor authencation and user-controlled encryption Just a couple of the security features we allow to help secure your files.
                         </p>
                     </div>
                 </div>
@@ -42,8 +40,7 @@ function Services_Section() {
                         </div>
                         <p className="fs-6 fw-bold">Real-time collaboration</p>
                         <p className="smaller-txt">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ratione rem corrupti.
-                            consectetur adipisicing elit. Iure sunt placeat
+                            Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.
                         </p>
                     </div>
                     <div className="col-6">
@@ -52,8 +49,7 @@ function Services_Section() {
                         </div>
                         <p className="fs-6 fw-bold">Store any type of file</p>
                         <p className="smaller-txt">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ratione rem corrupti.
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure sunt placeat
+                            Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.
                         </p>
                     </div>
                 </div>

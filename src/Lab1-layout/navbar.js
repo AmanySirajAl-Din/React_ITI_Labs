@@ -1,4 +1,7 @@
 import { Component } from "react";
+
+import "./navbar.css";
+
 import logoImg from "./assets/images/logo.svg"
 
 export default class Navbar extends Component {

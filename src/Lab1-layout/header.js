@@ -1,4 +1,3 @@
-import { Component } from "react";
 import "./header.css";
 import headerImg from "./assets/images/illustration-intro.png";
 
