@@ -1,0 +1,8 @@
+-install react
+    >>npx create-react-app react-labs
+
+-install Bootstrap
+    >>npm install --save bootstrap
+
+-Start React App
+    >>npm start
