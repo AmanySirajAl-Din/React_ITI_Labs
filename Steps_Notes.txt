@@ -3,6 +3,14 @@
 
 -install Bootstrap
     >>npm install --save bootstrap
+    in src/index.js:
+        import 'bootstrap/dist/css/bootstrap.css';
+
+-install Fortawesome
+    >>npm i --save @fortawesome/fontawesome-svg-core
+    >>npm install --save @fortawesome/free-solid-svg-icons
+    >>npm install --save @fortawesome/react-fontawesome
+
 
 -Start React App
     >>npm start
@@ -18,4 +26,5 @@ Git, GitHub
         >>git branch lab1
         >>git checkout lab1
         >>git push --set-upstream origin lab1
+
 

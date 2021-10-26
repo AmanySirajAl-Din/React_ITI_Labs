@@ -1,4 +1,9 @@
 footer{
     background-color: hsl(216, 53%, 9%);
     padding-top: 15rem;
+    font-size: 0.7rem;
+}
+
+.svg-div{
+    font-size: 1rem;
 }
