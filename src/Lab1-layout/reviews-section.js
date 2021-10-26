@@ -8,7 +8,7 @@ function Reviews_Section() {
     return (
         <section id="reviews-container" className="container-fluid row bg-quotes bg-darker">
             <div className="card-col col-lg-4 col-md-6 col-12">
-                <div className="container card bg-main px-5 py-3 m-2">
+                <div className="container card px-5 py-3 m-2">
                     <p className="row">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
                     <p className="row">
                         <img src={profile_1} className="col-3 rounded-circle" />
@@ -21,7 +21,7 @@ function Reviews_Section() {
             </div>
 
             <div className="card-col col-lg-4 col-md-6 col-12">
-                <div className="container card bg-main px-5 py-3 m-2">
+                <div className="container card px-5 py-3 m-2">
                     <p className="row">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
                     <p className="row">
                         <img src={profile_2} className="col-3 rounded-circle" />
@@ -33,7 +33,7 @@ function Reviews_Section() {
                 </div>
             </div>
             <div className="card-col col-lg-4 col-md-6 col-12">
-                <div className="container card bg-main px-5 py-3 m-2">
+                <div className="container card px-5 py-3 m-2">
                     <p className="row">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
                     <p className="row">
                         <img src={profile_3} className="col-3 rounded-circle" />

@@ -1,0 +1,17 @@
+.access-form{
+    position: relative;
+}
+
+.form-card{
+    position: absolute;
+    top: 0;
+    width: 70%;
+    left: 15%;
+    top: -8rem;
+}
+
+@media screen and (min-width:1230px) {
+    .form-card{
+        top: -5.5rem;
+    }
+}

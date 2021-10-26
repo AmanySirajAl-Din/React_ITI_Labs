@@ -11,6 +11,7 @@
 
 .card{
     height: 210px;
+    background-color: hsl(219, 30%, 18%)!important;
 }
 
 @media screen and (max-width: 1350px) and (min-width: 975px){

@@ -31,6 +31,11 @@ img, svg{
   background-color: hsl(218, 28%, 13%);
 }
 
+.bg-darkest{
+  background-color: hsl(216, 53%, 9%);
+}
+
+
 .smaller-txt{
   font-size: 0.7rem;
 }
