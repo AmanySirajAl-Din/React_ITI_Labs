@@ -247,7 +247,7 @@ export default function RegisterForm() {
                         </label>
                         <input
                             name="conf_password"
-                            value={user.password} // update value on each change
+                            value={confPassword} // update value on each change
                             onChange={(e) => handleInputChange(e)}
                             type="password"
                             className="form-control"
