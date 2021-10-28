@@ -17,6 +17,13 @@ export default function RegisterForm() {
 
     const noSpacesRegex = /^\S/;
 
+    const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    const passwordOneLowercase = new RegExp("(?=.*[a-z])")
+    const passwordOneUppercase = new RegExp("(?=.*[A-Z])")
+    const passwordOneNumber = new RegExp("(?=.*[0-9])")
+    const passwordOneSpecialChar = new RegExp("(?=.*[!@#$%^&*])")
+    const passwordLength_8Char = new RegExp("(?=.{8,})")
+
     const [errors, setErrors] = useState({
         name: null,
         email: null,
@@ -87,9 +94,17 @@ export default function RegisterForm() {
                 password:
                     e.target.value.length === 0
                         ? "This field is required"
-                        : e.target.value.length < 8
-                            ? "Min Length is 8"
-                            : null,
+                        : !passwordOneLowercase.test(e.target.value)
+                            ? "Password must  contains at least one lowercase letter"
+                            : !passwordOneUppercase.test(e.target.value)
+                                ? "Password must  contains at least one UPPERCASE letter"
+                                : !passwordOneNumber.test(e.target.value)
+                                    ? "Password must  contains at least one number"
+                                    : !passwordOneSpecialChar.test(e.target.value)
+                                        ? "Password must  contains at least one Special Character ex. ! @ # $ % ^ &*"
+                                        : e.target.value.length < 8
+                                            ? "Password  not less than 8 characters"
+                                            : null,
             });
         }
     };
@@ -118,9 +133,17 @@ export default function RegisterForm() {
             password:
                 user.password.length === 0
                     ? "This field is required"
-                    : user.password.length < 8
-                        ? "Min Length is 8"
-                        : null,
+                    : !passwordOneLowercase.test(user.password)
+                        ? "Password must  contains at least one lowercase letter"
+                        : !passwordOneUppercase.test(user.password)
+                            ? "Password must  contains at least one UPPERCASE letter"
+                            : !passwordOneNumber.test(user.password)
+                                ? "Password must  contains at least one number"
+                                : !passwordOneSpecialChar.test(user.password)
+                                    ? "Password must  contains at least one Special Character ex. ! @ # $ % ^ &*"
+                                    : user.password.length < 8
+                                        ? "Password  not less than 8 characters"
+                                        : null,
         });
     }
     return (
@@ -196,8 +219,25 @@ export default function RegisterForm() {
                             <small className="text-danger">{errors.password}</small>
                         )}
                     </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputConfPassword1" className="form-label">
+                            Confirm Password
+                        </label>
+                        <input
+                            name="conf_password"
+                            value={user.password} // update value on each change
+                            onChange={(e) => handleInputChange(e)}
+                            type="password"
+                            className="form-control"
+                            id="exampleInputConfPassword1"
+                            aria-describedby="exampleInputConfPassword1"
+                        />
+                        {errors.conf_password && (
+                            <small className="text-danger">{errors.conf_password}</small>
+                        )}
+                    </div>
                     <button type="submit" className="btn btn-primary">
-                        Login
+                        Register
                     </button>
                 </form>
             </div>
