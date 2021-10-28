@@ -10,6 +10,8 @@ export default function RegisterForm() {
         password: "",
     });
 
+    const [confPassword, setConfPassword] = useState("");
+
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     //const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -107,6 +109,19 @@ export default function RegisterForm() {
                                             : null,
             });
         }
+
+        if (e.target.name === "conf_password") {
+            setConfPassword(e.target.value);
+            setErrors({
+                ...errors,
+                conf_password:
+                    e.target.value.length === 0
+                        ? "This field is required"
+                        : e.target.value !== user.password
+                            ? "Passwords  don't match"
+                            : null,
+            });
+        }
     };
     const submitNewUser = (e) => {
         e.preventDefault();
@@ -144,6 +159,13 @@ export default function RegisterForm() {
                                     : user.password.length < 8
                                         ? "Password  not less than 8 characters"
                                         : null,
+            conf_password:
+                user.password.length === 0
+                    ? "This field is required"
+                    : user.password !== confPassword
+                        ? "Passwords  don't match"
+                        : null,
+
         });
     }
     return (
