@@ -122,84 +122,85 @@ export default function RegisterForm() {
                         ? "Min Length is 8"
                         : null,
         });
-        return (
-            <div className="registerForm">
-                Hello RegisterForm
-                <div className="container my-4">
-                    <form onSubmit={(e) => submitNewUser(e)}>
-                        <div className="mb-3">
-                            <label htmlFor="exampleInputName1" className="form-label">
-                                Name
-                            </label>
-                            <input
-                                name="user_name"
-                                value={user.user_name} // update value on each change
-                                onChange={(e) => handleInputChange(e)}
-                                type="user_name"
-                                className="form-control"
-                                id="exampleInputName1"
-                                aria-describedby="exampleInputName1"
-                            />
-                            {errors.user_name && (
-                                <small className="text-danger">{errors.user_name}</small>
-                            )}
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="exampleInputEmail1" className="form-label">
-                                Email Address
-                            </label>
-                            <input
-                                name="email"
-                                value={user.email} // update value on each change
-                                onChange={(e) => handleInputChange(e)}
-                                type="email"
-                                className="form-control"
-                                id="exampleInputEmail1"
-                                aria-describedby="exampleInputEmail1"
-                            />
-                            {errors.email && (
-                                <small className="text-danger">{errors.email}</small>
-                            )}
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="exampleInputUserName1" className="form-label">
-                                User Name
-                            </label>
-                            <input
-                                name="user_name"
-                                value={user.user_name} // update value on each change
-                                onChange={(e) => handleInputChange(e)}
-                                type="user_name"
-                                className="form-control"
-                                id="exampleInputUserName1"
-                                aria-describedby="exampleInputUserName1"
-                            />
-                            {errors.user_name && (
-                                <small className="text-danger">{errors.user_name}</small>
-                            )}
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="exampleInputPassword1" className="form-label">
-                                Password
-                            </label>
-                            <input
-                                name="password"
-                                value={user.password} // update value on each change
-                                onChange={(e) => handleInputChange(e)}
-                                type="password"
-                                className="form-control"
-                                id="exampleInputPassword1"
-                                aria-describedby="exampleInputPassword1"
-                            />
-                            {errors.password && (
-                                <small className="text-danger">{errors.password}</small>
-                            )}
-                        </div>
-                        <button type="submit" className="btn btn-primary">
-                            Login
-                        </button>
-                    </form>
-                </div>
-            </div>
-        );
     }
+    return (
+        <div className="registerForm">
+            Hello RegisterForm
+            <div className="container my-4">
+                <form onSubmit={(e) => submitNewUser(e)}>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputName1" className="form-label">
+                            Name
+                        </label>
+                        <input
+                            name="user_name"
+                            value={user.user_name} // update value on each change
+                            onChange={(e) => handleInputChange(e)}
+                            type="user_name"
+                            className="form-control"
+                            id="exampleInputName1"
+                            aria-describedby="exampleInputName1"
+                        />
+                        {errors.user_name && (
+                            <small className="text-danger">{errors.user_name}</small>
+                        )}
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputEmail1" className="form-label">
+                            Email Address
+                        </label>
+                        <input
+                            name="email"
+                            value={user.email} // update value on each change
+                            onChange={(e) => handleInputChange(e)}
+                            type="email"
+                            className="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="exampleInputEmail1"
+                        />
+                        {errors.email && (
+                            <small className="text-danger">{errors.email}</small>
+                        )}
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputUserName1" className="form-label">
+                            User Name
+                        </label>
+                        <input
+                            name="user_name"
+                            value={user.user_name} // update value on each change
+                            onChange={(e) => handleInputChange(e)}
+                            type="user_name"
+                            className="form-control"
+                            id="exampleInputUserName1"
+                            aria-describedby="exampleInputUserName1"
+                        />
+                        {errors.user_name && (
+                            <small className="text-danger">{errors.user_name}</small>
+                        )}
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputPassword1" className="form-label">
+                            Password
+                        </label>
+                        <input
+                            name="password"
+                            value={user.password} // update value on each change
+                            onChange={(e) => handleInputChange(e)}
+                            type="password"
+                            className="form-control"
+                            id="exampleInputPassword1"
+                            aria-describedby="exampleInputPassword1"
+                        />
+                        {errors.password && (
+                            <small className="text-danger">{errors.password}</small>
+                        )}
+                    </div>
+                    <button type="submit" className="btn btn-primary">
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    );
+}
