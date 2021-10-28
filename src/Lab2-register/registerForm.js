@@ -5,6 +5,7 @@ export default function RegisterForm() {
     // setUser: function to change the value
     // useState: Hook 
     const [user, setUser] = useState({
+        user_name: "",
         email: "",
         password: "",
     });
@@ -14,9 +15,12 @@ export default function RegisterForm() {
     //const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     //const emailRegex = /^[-a-zA-Z0-9-()]+(\S+[-a-zA-Z0-9-()]+)*$/;
 
+    const noSpacesRegex = /^\S/;
 
     const [errors, setErrors] = useState({
+        name: null,
         email: null,
+        user_name: null,
         password: null,
     });
 
@@ -28,6 +32,19 @@ export default function RegisterForm() {
 
     const handleInputChange = (e) => {
         console.log(e.target, e.target.value);
+        if (e.target.name === "name") {
+            setUser({
+                ...user,
+                name: e.target.value,
+            });
+            setErrors({
+                ...errors,
+                name:
+                    e.target.value.length === 0
+                        ? "This field is required"
+                        : null,
+            });
+        }
         if (e.target.name === "email") {
             setUser({
                 ...user,
@@ -43,6 +60,21 @@ export default function RegisterForm() {
                             : !emailRegex.test(e.target.value)
                                 ? "Not valid email address"
                                 : null,
+            });
+        }
+        if (e.target.name === "user_name") {
+            setUser({
+                ...user,
+                user_name: e.target.value,
+            });
+            setErrors({
+                ...errors,
+                user_name:
+                    e.target.value.length === 0
+                        ? "This field is required"
+                        : !noSpacesRegex.test(e.target.value)
+                            ? "No Spaces allowed in User Name"
+                            : null,
             });
         }
         if (e.target.name === "password") {
@@ -65,6 +97,10 @@ export default function RegisterForm() {
         e.preventDefault();
         setErrors({
             ...errors,
+            name:
+                user.name.length === 0
+                    ? "This field is required"
+                    : null,
             email:
                 user.email.length === 0
                     ? "This field is required"
@@ -73,6 +109,12 @@ export default function RegisterForm() {
                         : !emailRegex.test(user.email)
                             ? "Not valid email address"
                             : null,
+            user_name:
+                user.user_name.length === 0
+                    ? "This field is required"
+                    : !noSpacesRegex.test(e.target.value)
+                        ? "No Spaces allowed in User Name"
+                        : null,
             password:
                 user.password.length === 0
                     ? "This field is required"
@@ -85,6 +127,23 @@ export default function RegisterForm() {
                 Hello RegisterForm
                 <div className="container my-4">
                     <form onSubmit={(e) => submitNewUser(e)}>
+                        <div className="mb-3">
+                            <label htmlFor="exampleInputName1" className="form-label">
+                                Name
+                            </label>
+                            <input
+                                name="user_name"
+                                value={user.user_name} // update value on each change
+                                onChange={(e) => handleInputChange(e)}
+                                type="user_name"
+                                className="form-control"
+                                id="exampleInputName1"
+                                aria-describedby="exampleInputName1"
+                            />
+                            {errors.user_name && (
+                                <small className="text-danger">{errors.user_name}</small>
+                            )}
+                        </div>
                         <div className="mb-3">
                             <label htmlFor="exampleInputEmail1" className="form-label">
                                 Email Address
@@ -100,6 +159,23 @@ export default function RegisterForm() {
                             />
                             {errors.email && (
                                 <small className="text-danger">{errors.email}</small>
+                            )}
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="exampleInputUserName1" className="form-label">
+                                User Name
+                            </label>
+                            <input
+                                name="user_name"
+                                value={user.user_name} // update value on each change
+                                onChange={(e) => handleInputChange(e)}
+                                type="user_name"
+                                className="form-control"
+                                id="exampleInputUserName1"
+                                aria-describedby="exampleInputUserName1"
+                            />
+                            {errors.user_name && (
+                                <small className="text-danger">{errors.user_name}</small>
                             )}
                         </div>
                         <div className="mb-3">
