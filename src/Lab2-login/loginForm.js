@@ -46,11 +46,21 @@ export default function LoginForm() {
                                 : null,
             });
         }
-        /* e.target.name === "release_year" &&
+        if (e.target.name === "password") {
             setUser({
                 ...user,
-                release_year: e.target.value,
-            }); */
+                password: e.target.value,
+            });
+            setErrors({
+                ...errors,
+                password:
+                    e.target.value.length === 0
+                        ? "This field is required"
+                        : e.target.value.length < 8
+                            ? "Min Length is 8"
+                            : null,
+            });
+        }
     };
     const submitLoginFun = (e) => {
         e.preventDefault();
@@ -79,13 +89,30 @@ export default function LoginForm() {
                             name="email"
                             value={user.email} // update value on each change
                             onChange={(e) => handleInputChange(e)}
-                            type="text"
+                            type="email"
                             className="form-control"
                             id="exampleInputEmail1"
                             aria-describedby="exampleInputEmail1"
                         />
                         {errors.email && (
                             <small className="text-danger">{errors.email}</small>
+                        )}
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputPassword1" className="form-label">
+                            Password
+                        </label>
+                        <input
+                            name="password"
+                            value={user.password} // update value on each change
+                            onChange={(e) => handleInputChange(e)}
+                            type="password"
+                            className="form-control"
+                            id="exampleInputPassword1"
+                            aria-describedby="exampleInputPassword1"
+                        />
+                        {errors.password && (
+                            <small className="text-danger">{errors.password}</small>
                         )}
                     </div>
                     <button type="submit" className="btn btn-primary">
