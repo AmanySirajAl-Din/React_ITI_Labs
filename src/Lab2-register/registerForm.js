@@ -17,7 +17,7 @@ export default function RegisterForm() {
     //const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     //const emailRegex = /^[-a-zA-Z0-9-()]+(\S+[-a-zA-Z0-9-()]+)*$/;
 
-    const noSpacesRegex = /^\S/;
+    const spaceRegex = /\s/;
 
     const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
     const passwordOneLowercase = new RegExp("(?=.*[a-z])")
@@ -81,7 +81,7 @@ export default function RegisterForm() {
                 user_name:
                     e.target.value.length === 0
                         ? "This field is required"
-                        : !noSpacesRegex.test(e.target.value)
+                        : spaceRegex.test(e.target.value)
                             ? "No Spaces allowed in User Name"
                             : null,
             });
@@ -142,7 +142,7 @@ export default function RegisterForm() {
             user_name:
                 user.user_name.length === 0
                     ? "This field is required"
-                    : !noSpacesRegex.test(e.target.value)
+                    : spaceRegex.test(e.target.value)
                         ? "No Spaces allowed in User Name"
                         : null,
             password:
