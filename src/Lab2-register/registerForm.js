@@ -178,16 +178,16 @@ export default function RegisterForm() {
                             Name
                         </label>
                         <input
-                            name="user_name"
-                            value={user.user_name} // update value on each change
+                            name="name"
+                            value={user.name} // update value on each change
                             onChange={(e) => handleInputChange(e)}
-                            type="user_name"
+                            type="text"
                             className="form-control"
                             id="exampleInputName1"
                             aria-describedby="exampleInputName1"
                         />
-                        {errors.user_name && (
-                            <small className="text-danger">{errors.user_name}</small>
+                        {errors.name && (
+                            <small className="text-danger">{errors.name}</small>
                         )}
                     </div>
                     <div className="mb-3">
