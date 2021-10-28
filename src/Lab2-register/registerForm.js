@@ -73,6 +73,12 @@ export default function RegisterForm() {
                         : !emailRegex.test(user.email)
                             ? "Not valid email address"
                             : null,
+            password:
+                user.password.length === 0
+                    ? "This field is required"
+                    : user.password.length < 8
+                        ? "Min Length is 8"
+                        : null,
         });
         return (
             <div className="registerForm">
