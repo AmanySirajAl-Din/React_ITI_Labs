@@ -34,7 +34,8 @@ export default function RegisterForm() {
     });
 
     useEffect(() => {
-        if (!errors.email && !errors.password) {
+        if (!errors.name && !errors.email &&
+            !errors.user_name && !errors.password && !errors.conf_password) {
             console.log(user);
         }
     }, [errors])
